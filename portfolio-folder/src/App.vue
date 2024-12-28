@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import CornerBlock from "@/components/CornerBlock.vue";
+import { RouterView } from 'vue-router'
+import FolderHeader from "@/components/FolderHeader.vue";
 </script>
 
 <template>
-<corner-block align="top-left" text="text"/>
-<corner-block align="top-right" text="text"/>
-<corner-block align="bottom-left" text="text"/>
-<corner-block align="bottom-right" text="text"/>
+  <folder-header />
+  <router-view class="folder"/>
 </template>
 
 <style scoped lang="sass">
+.folder
 </style>

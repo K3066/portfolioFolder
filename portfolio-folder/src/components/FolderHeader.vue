@@ -1,0 +1,28 @@
+<script setup lang="ts">
+
+import CornerBlock from "@/components/CornerBlock.vue";
+import MainMenu from "@/components/menuComponents/MainMenu.vue";
+import Logo from "@/components/Logo.vue";
+</script>
+
+<template>
+  <header class="folder-header" >
+    <corner-block corner-align="top-left">
+      <template #content>
+        <div class="folder-header__content">
+          <logo/>
+          <main-menu/>
+        </div>
+      </template>
+    </corner-block>
+  </header>
+</template>
+
+<style scoped lang="sass">
+.folder-header
+  position: fixed
+  &__content
+    display: flex
+    align-items: center
+    gap: 30px
+</style>

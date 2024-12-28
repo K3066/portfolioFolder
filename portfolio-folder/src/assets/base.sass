@@ -33,9 +33,11 @@
   \:root
     --color-text: var(--app-inverse-text-default)
     --color-text-mute: var(--app-inverse-text-mute)
+
     --color-background: var(--app-inverse-background-default)
     --color-background-soft: var(--app-inverse-background-soft)
     --color-background-mute: var(--app-inverse-background-mute)
+
     --color-border: var(--app-inverse-border-default)
 
 *,
@@ -44,16 +46,18 @@
   box-sizing: border-box
   margin: 0
   font-weight: normal
+a
+  color: var(--color-text)
+  text-decoration: none
 
-body 
+body
   min-height: 100vh
   color: var(--color-text)
-  //background: var(--color-background)
+  background: var(--color-background)
   transition: color 0.5s, background-color 0.5s
-  font-family: DM Sans, Avenir, Helvetica, Arial, sans-serif
+  font-family: DM Sans, sans-serif
   font-size: 15px
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-
-
+  position: relative

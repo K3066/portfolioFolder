@@ -1,20 +1,18 @@
 <script setup lang="ts">
 import RoundedEdge from "@/components/RoundedEdge.vue";
-import BaseIcon from "@/components/icons/BaseIcon.vue";
 
 const props = defineProps({
-  align: String,
+  cornerAlign: String,
   text: String,
 })
 </script>
 
 <template>
-  <div class="corner-block" :class="props.align">
+  <div class="corner-block" :class="props.cornerAlign">
     <rounded-edge class="rounded-edge--left"/>
     <div class="corner-block__content" >
-      <slot/>
+      <slot name="content"/>
       <span>{{props.text}}</span>
-<!--      <base-icon />-->
     </div>
     <rounded-edge class="rounded-edge--right"/>
   </div>
@@ -22,11 +20,16 @@ const props = defineProps({
 
 <style scoped lang="sass">
 .corner-block
-  position: relative
+  position: absolute
+  width: fit-content
   &__content
     padding: 0.5rem 1rem 0.75rem 1rem
     background: var(--color-background)
+    position: relative
 .top-left
+  position: absolute
+  left: 0
+  top: 0
   .corner-block__content
     border-bottom-right-radius: 20px
   .rounded-edge--left
@@ -37,6 +40,8 @@ const props = defineProps({
     top: 0
     right: -20px
 .top-right
+  top: 0
+  right: 0
   .corner-block__content
     border-bottom-left-radius: 20px
   .rounded-edge--left
@@ -56,6 +61,9 @@ const props = defineProps({
     bottom: 0
     right: -20px
 .bottom-right
+  bottom: 0
+  right: 0
+  z-index: 900
   .corner-block__content
     border-top-left-radius: 20px
   .rounded-edge--left
