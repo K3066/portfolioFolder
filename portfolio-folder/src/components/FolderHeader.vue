@@ -21,6 +21,9 @@ import Logo from "@/components/Logo.vue";
 <style scoped lang="sass">
 .folder-header
   position: fixed
+  z-index: 1
+  top: 0.75rem
+  left: 0.75rem
   &__content
     display: flex
     align-items: center

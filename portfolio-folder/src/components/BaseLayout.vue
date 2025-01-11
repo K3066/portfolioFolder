@@ -1,12 +1,47 @@
 <script setup lang="ts">
 
+import RoundedEdge from "@/components/RoundedEdge.vue";
 </script>
 
 <template>
-  <div class="block"></div>
-<!--  <slot name="left"/>-->
-<!--  <slot name="right"/>-->
+    <div class="base-layout">
+      <div class="base-layout--left">
+        <slot class="base-layout--left" name="left"/>
+      </div>
+      <div class="base-layout--right">
+        <slot class="base-layout--right" name="right"/>
+      </div>
+
+      <rounded-edge align="top-left"/>
+      <rounded-edge align="top-right"/>
+      <rounded-edge align="bottom-left"/>
+      <rounded-edge align="bottom-right"/>
+    </div>
 </template>
 
 <style scoped lang="sass">
+.base-layout
+  display: flex
+  flex-direction: row
+  gap: 0.75rem
+  max-height: 100%
+  align-items: stretch
+  overflow-y: auto
+  &--right, &--left
+    height: 100%
+    flex-grow: 1
+    width: 100%
+  &--left
+    background: blue
+    flex: 0 0 50%
+    max-height: 100%
+    position: sticky
+    top: 0
+    outline: 1px solid red
+  &--right
+    padding: 0.75rem 0
+    flex: 1
+  .rounded-edge
+    position: fixed
+    right: 1.25rem
 </style>
