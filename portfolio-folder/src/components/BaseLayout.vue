@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-import RoundedEdge from "@/components/RoundedEdge.vue";
 </script>
 
 <template>
@@ -11,11 +10,6 @@ import RoundedEdge from "@/components/RoundedEdge.vue";
       <div class="base-layout--right">
         <slot class="base-layout--right" name="right"/>
       </div>
-
-      <rounded-edge align="top-left"/>
-      <rounded-edge align="top-right"/>
-      <rounded-edge align="bottom-left"/>
-      <rounded-edge align="bottom-right"/>
     </div>
 </template>
 
@@ -24,9 +18,11 @@ import RoundedEdge from "@/components/RoundedEdge.vue";
   display: flex
   flex-direction: row
   gap: 0.75rem
-  max-height: 100%
+  width: 100%
   align-items: stretch
   overflow-y: auto
+  position: relative
+
   &--right, &--left
     height: 100%
     flex-grow: 1
@@ -41,7 +37,4 @@ import RoundedEdge from "@/components/RoundedEdge.vue";
   &--right
     padding: 0.75rem 0
     flex: 1
-  .rounded-edge
-    position: fixed
-    right: 1.25rem
 </style>

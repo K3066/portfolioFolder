@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import FolderHeader from "@/components/FolderHeader.vue";
-import CornerBlock from "@/components/CornerBlock.vue";
-import RoundedEdge from "@/components/RoundedEdge.vue";
+import BorderLayer from "@/components/BorderLayer.vue";
 </script>
 
 <template>
   <folder-header />
   <router-view class="folder"/>
+  <border-layer/>
+
 </template>
 
 <style scoped lang="sass">
@@ -17,6 +18,6 @@ import RoundedEdge from "@/components/RoundedEdge.vue";
   display: flex
   flex-grow: 1
   position: relative
-  padding: 0 0.75rem
+  padding: 0.75rem
 
 </style>

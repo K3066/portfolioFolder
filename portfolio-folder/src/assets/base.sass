@@ -20,25 +20,26 @@
 
 /* semantic color variables for this project */
 \:root
-  --color-text: var(--app-text-default)
-  --color-text-mute: var(--app-text-mute)
+  --color-text: var(--app-inverse-text-default)
+  --color-text-mute: var(--app-inverse-text-mute)
 
-  --color-background: var(--app-background-default)
-  --color-background-soft: var(--app-background-soft)
-  --color-background-mute: var(--app-background-mute)
+  --color-background: var(--app-inverse-background-default)
+  --color-background-soft: var(--app-inverse-background-soft)
+  --color-background-mute: var(--app-inverse-background-mute)
 
-  --color-border: var(--app-border-default)
+  --color-border: var(--app-inverse-border-default)
 
 @media (prefers-color-scheme: dark) 
   \:root
-    --color-text: var(--app-inverse-text-default)
-    --color-text-mute: var(--app-inverse-text-mute)
 
-    --color-background: var(--app-inverse-background-default)
-    --color-background-soft: var(--app-inverse-background-soft)
-    --color-background-mute: var(--app-inverse-background-mute)
+    --color-text: var(--app-text-default)
+    --color-text-mute: var(--app-text-mute)
 
-    --color-border: var(--app-inverse-border-default)
+    --color-background: var(--app-background-default)
+    --color-background-soft: var(--app-background-soft)
+    --color-background-mute: var(--app-background-mute)
+
+    --color-border: var(--app-border-default)
 
 *,
 *::before,

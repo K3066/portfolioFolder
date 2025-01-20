@@ -11,11 +11,11 @@
       <path  d="M4.7824 12.4954C4.7824 13.2815 4.98643 13.8207 5.39451 14.106C5.80257 14.3634 6.57891 14.5269 7.72348 14.593V15H0V14.593C1.16447 14.5269 1.95079 14.3495 2.35884 14.0642C2.73207 13.7651 2.91622 13.1459 2.91622 12.2101V2.40376C2.91622 1.54799 2.67236 0.991415 2.18469 0.733999C1.89601 0.584399 1.16447 0.476582 0 0.407003V0H7.78323L7.78542 0.52525C7.40088 0.470658 6.91086 0.472456 6.56738 0.508606C6.0074 0.567527 5.62264 0.660408 5.42435 0.775743C4.99037 1.02817 4.7824 1.57581 4.7824 2.40376C4.7824 5.76778 4.7824 9.13136 4.7824 12.4954Z" />
     </svg>
     <div class="app-logo__name">
-      <div class="logo-name--hiding">
-        Romanchuk
-      </div>
       <div class="logo-name--appearing">
         Konstantin
+      </div>
+      <div class="logo-name--hiding">
+        Romanchuk
       </div>
     </div>
   </div>
@@ -25,6 +25,7 @@
 #logo
   fill: var(--color-text)
 .app-logo
+  user-select: none
   display: flex
   flex-direction: row
   align-items: start
@@ -36,10 +37,11 @@
     height: 15px
     overflow: hidden
     .logo-name--hiding, .logo-name--appearing
+      transform: translateY(-15px)
       background: transparent
       transition-duration: 0.5s
   &:hover
     .app-logo__name
       .logo-name--hiding, .logo-name--appearing
-          transform: translateY(-17px)
+          transform: translateY(0px)
 </style>
