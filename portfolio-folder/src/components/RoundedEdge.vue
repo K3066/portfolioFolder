@@ -16,18 +16,18 @@ const props = defineProps({
   #edge
     fill: var(--color-background)
 .top-left
-  left: 0.75rem
-  top: 0.75rem
+  left: 0
+  top: 0
   rotate: 180deg
 .top-right
-  top: 0.75rem
-  right: 0.75rem
+  top: 0
+  right: 0
   rotate: -90deg
 .bottom-left
-  bottom: 0.75rem
-  left: 0.75rem
+  bottom: 0
+  left: 0
   rotate: 90deg
 .bottom-right
-  bottom: 0.75rem
-  right: 0.75rem
+  bottom: 0
+  right: 0
 </style>

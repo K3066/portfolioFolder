@@ -23,7 +23,7 @@ const props = defineProps({
   position: absolute
   width: fit-content
   &__content
-    padding: 0.5rem 1rem 0.75rem 1rem
+    padding: 0.5rem 1rem $global-bento-space 1rem
     background: var(--color-background)
     position: relative
 .top-left
@@ -31,7 +31,7 @@ const props = defineProps({
   left: 0
   top: 0
   .corner-block__content
-    border-bottom-right-radius: 20px
+    border-bottom-right-radius: $global-radius
   .rounded-edge--left
     rotate: 180deg
     bottom: -20px
@@ -43,7 +43,7 @@ const props = defineProps({
   top: 0
   right: 0
   .corner-block__content
-    border-bottom-left-radius: 20px
+    border-bottom-left-radius: $global-radius
   .rounded-edge--left
     rotate: -90deg
     left: -20px
@@ -52,7 +52,7 @@ const props = defineProps({
     right: 0
 .bottom-left
   .corner-block__content
-    border-top-right-radius: 20px
+    border-top-right-radius: $global-radius
   .rounded-edge--left
     rotate: 90deg
     top: -20px
@@ -65,7 +65,7 @@ const props = defineProps({
   right: 0
   z-index: 900
   .corner-block__content
-    border-top-left-radius: 20px
+    border-top-left-radius: $global-radius
   .rounded-edge--left
     left: -20px
     bottom: 0
