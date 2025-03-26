@@ -32,7 +32,7 @@
   gap: 0.352rem
   font-size: 17px
   font-weight: 300
-  .app-logo__name
+  &__name
     line-height: 90%
     height: 15px
     overflow: hidden
