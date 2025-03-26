@@ -16,21 +16,10 @@ import RoundedEdge from "@/components/RoundedEdge.vue";
 
 <style scoped lang="sass">
 .border-layer
-  position: fixed
-  flex: 0 0 auto
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  width: auto 
-  min-height: 100vh
-  background: none
-  user-select: none
+  z-index: 999
+  border: $global-bento-space solid
+  border-color: var(--color-background)
   pointer-events: none
-  z-index: 9
-  &--border
-    height: 100%
-    width: 100%
-    opacity: 1
-    border: 0.75rem solid var(--color-background)
+  position: fixed
+  inset: 0
 </style>
