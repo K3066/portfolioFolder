@@ -1,45 +1,24 @@
-/* color palette from <https://github.com/vuejs/theme> */
 \:root
-  --app-text-default: #0e1011
-  --app-text-mute: #0e101180
-  --app-inverse-text-default: #ffffff
-  --app-inverse-text-mute: #ffffff99
+  --color-text: var(--app-text-default)
+  --color-text-mute: var(--app-text-mute)
 
-  --app-background-default: #ffffff
-  --app-background-soft: #f6f6f6
-  --app-background-mute: #ececec
-  --app-inverse-background-default: #0e1011
-  --app-inverse-background-soft: #181b1c
-  --app-inverse-background-mute: #1f2122
+  --color-background: var(--app-background-default)
+  --color-background-soft: var(--app-background-soft)
+  --color-background-mute: var(--app-background-mute)
 
-  --app-border-default: #e8e8e8
-  --app-incerse-border-default: #ffffff33
-
-  --app-icon-default: #0e1011
-  --app-inverse-icon-default: #ffffff
-
-/* semantic color variables for this project */
-\:root
-  --color-text: var(--app-inverse-text-default)
-  --color-text-mute: var(--app-inverse-text-mute)
-
-  --color-background: var(--app-inverse-background-default)
-  --color-background-soft: var(--app-inverse-background-soft)
-  --color-background-mute: var(--app-inverse-background-mute)
-
-  --color-border: var(--app-inverse-border-default)
+  --color-border: var(--app-border-default)
 
 @media (prefers-color-scheme: dark) 
   \:root
+    --color-text: var(--app-inverse-text-default)
+    --color-text-mute: var(--app-inverse-text-mute)
 
-    --color-text: var(--app-text-default)
-    --color-text-mute: var(--app-text-mute)
+    --color-background: var(--app-inverse-background-default)
+    --color-background-soft: var(--app-inverse-background-soft)
+    --color-background-mute: var(--app-inverse-background-mute)
 
-    --color-background: var(--app-background-default)
-    --color-background-soft: var(--app-background-soft)
-    --color-background-mute: var(--app-background-mute)
+    --color-border: var(--app-inverse-border-default)
 
-    --color-border: var(--app-border-default)
 
 *,
 *::before,
@@ -47,16 +26,31 @@
   box-sizing: border-box
   margin: 0
   font-weight: normal
-a
-  color: var(--color-text)
-  text-decoration: none
 
+a
+  color: inherit
+  text-decoration: none
+h1
+  font-size: $h1-font-size
+  height: $h1-height
+h2
+  font-size: $h2-font-size
+  height: $h2-height
+h3
+  font-size: $h3-font-size
+  height: $h3-height
+h4
+  font-size: $h4-font-size
+  height: $h4-height
+h5
+  font-size: $h5-font-size
+  height: $h5-height
+h6
+  font-size: $h6-font-size
 body
   color: var(--color-text)
-  transition: color 0.5s, background-color 0.5s
-  font-family: DM Sans, sans-serif
-  font-size: 15px
-  //text-rendering: optimizeLegibility
-  //-webkit-font-smoothing: antialiased
-  //-moz-osx-font-smoothing: grayscale
-  overflow: hidden
+  padding: 0 $global-bento-space
+  font-family: $global-font-family
+  font-size: $global-font-size
+  background: var(--color-background)
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s, box-shadow 0.5s
