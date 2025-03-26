@@ -22,8 +22,8 @@ import Logo from "@/components/Logo.vue";
 .folder-header
   position: fixed
   z-index: 1
-  top: 0.75rem
-  left: 0.75rem
+  top: $global-bento-space
+  left: $global-bento-space
   &__content
     display: flex
     align-items: center
