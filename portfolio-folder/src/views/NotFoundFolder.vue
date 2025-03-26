@@ -1,9 +1,13 @@
 <script setup lang="ts">
 
+import BorderLayer from "@/components/BorderLayer.vue";
+import CornerBlock from "@/components/CornerBlock.vue";
 </script>
 
 <template>
-  <div class="not-found">
+  <div class="not-found folder">
+    <border-layer />
+    <corner-block corner-align="top-left" text="Back to top" />
     <svg
       class="not-found__svg"
       id="raccoon"
@@ -28,6 +32,14 @@
 </template>
 
 <style scoped lang="sass">
+.folder
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  flex-grow: 1
+  padding: $global-bento-space
+
 #raccoon
   fill: var(--color-text)
 .not-found
