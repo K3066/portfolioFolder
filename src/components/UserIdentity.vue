@@ -8,19 +8,19 @@ defineProps<{
 </script>
 
 <template>
-<div class="user-identity">
-  <div class="user-identity--avatar">
-123
-  </div>
-  <div class="user-identity--about">
-    <h5 class="user-identity--about-name">
-      {{name}}
-    </h5>
-    <div class="user-identity--about-specialization">
-      {{specialization}}
+  <div class="user-identity">
+    <div class="user-identity--avatar">
+      123
+    </div>
+    <div class="user-identity--about">
+      <h5 class="user-identity--about-name">
+        {{name}}
+      </h5>
+      <div class="user-identity--about-specialization">
+        {{specialization}}
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped lang="sass">

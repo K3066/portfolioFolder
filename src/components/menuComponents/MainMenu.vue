@@ -2,18 +2,19 @@
 import MainMenuPoint from "@/components/menuComponents/MainMenuPoint.vue";
 
 const menuList = [
-  {name: "Portfolio"},
-  {name: "About"},
-  {name: "Journal"},
-  {name: "Contact"},
-  {name: "Components"}
+  {id: "Portfolio", name: "Portfolio"},
+  {id: "About", name: "About"},
+  {id: "Journal", name: "Journal"},
+  {id: "Contact", name: "Contact"},
+  {id: "Components", name: "Components"}
 ]
 </script>
 
 <template>
   <nav class="main-menu">
     <main-menu-point v-for="point in menuList"
-                     v-bind="point"/>
+                     v-bind="point"
+                     :key="point.id"/>
   </nav>
 </template>
 

@@ -4,14 +4,14 @@ import RoundedEdge from "@/components/RoundedEdge.vue";
 </script>
 
 <template>
-<div class="border-layer">
-  <div class="border-layer--border">
-    <rounded-edge align="top-left"/>
-    <rounded-edge align="top-right"/>
-    <rounded-edge align="bottom-left"/>
-    <rounded-edge align="bottom-right"/>
+  <div class="border-layer">
+    <div class="border-layer--border">
+      <rounded-edge align="top-left"/>
+      <rounded-edge align="top-right"/>
+      <rounded-edge align="bottom-left"/>
+      <rounded-edge align="bottom-right"/>
+    </div>
   </div>
-</div>
 </template>
 
 <style scoped lang="sass">

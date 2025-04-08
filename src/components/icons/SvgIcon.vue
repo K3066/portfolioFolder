@@ -12,7 +12,9 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <svg :viewBox="viewBox" :height="height" :width="width">
+  <svg :viewBox="viewBox"
+       :height="height"
+       :width="width">
     <use :xlink:href="`#${icon}`" />
   </svg>
 </template>

@@ -11,16 +11,19 @@ defineProps<{
 
 <template>
   <a :href="href">
-    <div :class="{reverse: reverse}" class="social-card">
+    <div :class="{reverse: reverse}"
+         class="social-card">
       <div class="social-card--name">
         {{ name }}
       </div>
       <div class="social-card--icon">
         <div class="hidding">
-          <svg-icon :icon="icon" view-box="0 0 24 24" />
+          <svg-icon :icon="icon"
+                    view-box="0 0 24 24" />
         </div>
         <div class="appearing">
-          <svg-icon icon="UpRightArrowIcon" view-box="0 0 24 24" />
+          <svg-icon icon="UpRightArrowIcon"
+                    view-box="0 0 24 24" />
         </div>
       </div>
     </div>

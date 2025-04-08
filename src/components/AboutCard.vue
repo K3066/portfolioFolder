@@ -7,7 +7,8 @@ const aboutText = "Hi, I'm russian frontend developer!";
 
 <template>
   <div class="about-card">
-    <user-identity name="Romanchuk Konstantin" specialization="Frontend Developer" />
+    <user-identity name="Romanchuk Konstantin"
+                   specialization="Frontend Developer" />
     <text-block :text="aboutText" />
   </div>
 </template>

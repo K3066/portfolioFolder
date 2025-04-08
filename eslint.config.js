@@ -1,13 +1,13 @@
-import pluginVue from 'eslint-plugin-vue'
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
-import pluginVitest from '@vitest/eslint-plugin'
-import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
+import pluginVue from "eslint-plugin-vue";
 
-export default [
-  {
-    name: 'app/files-to-lint',
-    files: ['**/*.{ts,mts,tsx,vue}'],
-    rules: {
+
+export default defineConfig([
+  { files: ["**/*.{js,mjs,cjs,ts,vue}"] },
+  { files: ["**/*.{js,mjs,cjs,ts,vue}"], languageOptions: { globals: {...globals.browser, ...globals.node} }, rules: {
       "vue/max-attributes-per-line": ["warn", {
         "singleline": {
           "max": 1
@@ -77,20 +77,9 @@ export default [
           'renderError'
         ]
       }],
-    }
-  },
-
-  {
-    name: 'app/files-to-ignore',
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
-  },
-
-  ...pluginVue.configs['flat/essential'],
-  ...vueTsEslintConfig(),
-
-  {
-    ...pluginVitest.configs.recommended,
-    files: ['src/**/__tests__/*'],
-  },
-  skipFormatting,
-]
+    } },
+  { files: ["**/*.{js,mjs,cjs,ts,vue}"], plugins: { js }, extends: ["js/recommended"] },
+  tseslint.configs.recommended,
+  pluginVue.configs["flat/essential"],
+  { files: ["**/*.vue"], languageOptions: { parserOptions: { parser: tseslint.parser } } },
+]);

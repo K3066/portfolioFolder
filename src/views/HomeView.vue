@@ -4,11 +4,11 @@ import AboutCard from "@/components/AboutCard.vue";
 import SocialCard from "@/components/menuComponents/SocialCard.vue";
 
 const socialCards = [
-  {href: '/portfolio', name: "Instagram", icon: "InstagramIcon"},
-  {href: '/portfolio', name: "Pinterest", icon: "PinterestIcon"},
-  {href: '/portfolio', name: "Behance", icon: "BehanceIcon"},
-  {href: '/portfolio', name: "Twitter", icon: "TwitterIcon"},
-  {href: '/portfolio', name: "Contact Me", icon: "MailIcon", reverse: true},
+  {id: "Instagram", href: '/portfolio', name: "Instagram", icon: "InstagramIcon"},
+  {id: "Pinterest", href: '/portfolio', name: "Pinterest", icon: "PinterestIcon"},
+  {id: "Behance", href: '/portfolio', name: "Behance", icon: "BehanceIcon"},
+  {id: "Twitter", href: '/portfolio', name: "Twitter", icon: "TwitterIcon"},
+  {id: "Mail", href: '/portfolio', name: "Contact Me", icon: "MailIcon", reverse: true},
 ]
 </script>
 
@@ -19,9 +19,12 @@ const socialCards = [
     </template>
     <template #right>
       <section class="section-about">
-        <about-card class="section-about--card" header="About Me" />
+        <about-card class="section-about--card"
+                    header="About Me" />
         <div class="section-about--social-cards">
-          <social-card v-for="card in socialCards" v-bind="card" />
+          <social-card v-for="card in socialCards"
+                       v-bind="card"
+                       :key="card.id" />
         </div>
       </section>
     </template>

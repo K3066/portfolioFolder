@@ -8,7 +8,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="corner-block" :class="props.cornerAlign">
+  <div class="corner-block"
+       :class="props.cornerAlign">
     <rounded-edge class="rounded-edge--left"/>
     <div class="corner-block__content" >
       <slot name="content"/>

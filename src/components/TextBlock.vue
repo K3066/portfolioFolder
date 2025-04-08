@@ -10,13 +10,12 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <div :class="textType" class="text-block">
+  <div :class="textType"
+
+       class="text-block">
     {{ text }}
   </div>
 </template>
 
 <style scoped lang="sass">
-.text-block
-
-.medium
 </style>

@@ -7,7 +7,8 @@ import CornerBlock from "@/components/CornerBlock.vue";
 <template>
   <div class="not-found folder">
     <border-layer />
-    <corner-block corner-align="top-left" text="Back to top" />
+    <corner-block corner-align="top-left"
+                  text="Back to top" />
     <svg
       class="not-found__svg"
       id="raccoon"

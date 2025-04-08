@@ -2,7 +2,7 @@
 
 import CornerBlock from "@/components/CornerBlock.vue";
 import MainMenu from "@/components/menuComponents/MainMenu.vue";
-import Logo from "@/components/Logo.vue";
+import LogoComponent from "@/components/LogoComponent.vue";
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import Logo from "@/components/Logo.vue";
     <corner-block corner-align="top-left">
       <template #content>
         <div class="folder-header__content">
-          <logo/>
+          <logo-component/>
           <main-menu/>
         </div>
       </template>

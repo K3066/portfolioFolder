@@ -5,10 +5,12 @@
 <template>
   <main class="base-layout">
     <div class="base-layout--left">
-      <slot class="base-layout--left" name="left"/>
+      <slot class="base-layout--left"
+            name="left"/>
     </div>
     <div class="base-layout--right">
-      <slot class="base-layout--right" name="right"/>
+      <slot class="base-layout--right"
+            name="right"/>
     </div>
   </main>
 </template>
