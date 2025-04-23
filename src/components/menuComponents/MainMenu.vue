@@ -2,11 +2,11 @@
 import MainMenuPoint from "@/components/menuComponents/MainMenuPoint.vue";
 
 const menuList = [
-  {id: "Portfolio", name: "Portfolio"},
-  {id: "About", name: "About"},
-  {id: "Journal", name: "Journal"},
-  {id: "Contact", name: "Contact"},
-  {id: "Components", name: "Components"}
+  {id: "Portfolio", to: "/", name: "Portfolio"},
+  {id: "About", to: "/", name: "About"},
+  {id: "Journal", to: "/", name: "Journal"},
+  {id: "Contact", to: "/", name: "Contact"},
+  {id: "Components", to: "/", name: "Components"}
 ]
 </script>
 

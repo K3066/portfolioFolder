@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import FooterComponent from "@/components/footerComponents/footerComponent.vue";
 </script>
 
 <template>
@@ -11,6 +11,9 @@
     <div class="base-layout--right">
       <slot class="base-layout--right"
             name="right"/>
+      <footer>
+        <footer-component/>
+      </footer>
     </div>
   </main>
 </template>

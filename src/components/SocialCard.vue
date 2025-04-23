@@ -38,7 +38,7 @@ defineProps<{
   height: fit-content
   border-radius: $global-radius
   padding: 24px
-  background-color: var(--color-background-soft)
+  background-color: var(--color-background-mute)
   cursor: pointer
   transition: color 0.5s, background-color 0.5s
   &--icon
@@ -49,7 +49,7 @@ defineProps<{
     .hidding, .appearing
       transition-duration: 0.5s
   &:hover
-    background-color: var(--color-background-mute)
+    background-color: var(--color-background-soft)
     .social-card
       &--icon
         overflow: hidden

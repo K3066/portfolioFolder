@@ -1,23 +1,45 @@
 <script setup lang="ts">
 
+import api from '@/mockApi/mockAPI'
+import {onMounted, ref} from "vue"; // импортируешь свой экземпляр
+
+interface IUser {
+  name: string
+  specialization: string
+}
+
+const form = ref<IUser>({
+  name: '',
+  specialization: ''
+})
+
+onMounted(async () => {
+  const response = await api.get<IUser>('/user')
+  form.value = response.data
+})
+
 defineProps<{
-  name: string,
-  specialization: string,
+  compact?: boolean,
+  reverse?: boolean,
 }>()
+
+
 
 </script>
 
 <template>
-  <div class="user-identity">
+  <div class="user-identity"
+       :class="{'user-identity__compact': compact,'reverse': reverse,}">
     <div class="user-identity--avatar">
-      123
+      <img src="@/assets/image.webp"
+           alt="avatar" >
     </div>
     <div class="user-identity--about">
       <h5 class="user-identity--about-name">
-        {{name}}
+        {{form.name}}
       </h5>
       <div class="user-identity--about-specialization">
-        {{specialization}}
+        {{form.specialization}}
       </div>
     </div>
   </div>
@@ -30,13 +52,15 @@ defineProps<{
   gap: 24px
   &--avatar
     display: flex
-    justify-content: center
     align-items: center
     flex-direction: column
     height: 80px
     width: 80px
     border-radius: 100%
     background-color: black
+    overflow: hidden
+    img
+      width: 100%
   &--about
     display: flex
     flex-direction: column
@@ -46,4 +70,19 @@ defineProps<{
       white-space: nowrap
     &-specialization
       color: var(--color-text-mute)
+  &__compact
+    gap: 16px
+    .user-identity--avatar
+      height: 60px
+      width: 60px
+@media (prefers-color-scheme: dark)
+  .reverse
+    .user-identity--about-name
+      color: var(--inverse-color-text)
+    .user-identity--about-specialization
+      color: var(--inverse-color-text-mute)
+    --color-text: var(--app-text-default)
+    --color-text-mute: var(--app-inverse-text-mute)
+    --color-background-soft: var(--app-background-soft)
+    --color-background-mute: var(--app-background-mute)
 </style>

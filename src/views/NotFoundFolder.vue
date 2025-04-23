@@ -2,13 +2,27 @@
 
 import BorderLayer from "@/components/BorderLayer.vue";
 import CornerBlock from "@/components/CornerBlock.vue";
+import CornerButton from "@/components/buttonsComponents/CornerButton.vue";
+import { useRouter } from "vue-router";
+const router = useRouter()
+
+function goToHomepage(){
+  router.push({name:'portfolioPage'});
+}
 </script>
 
 <template>
   <div class="not-found folder">
     <border-layer />
-    <corner-block corner-align="top-left"
-                  text="Back to top" />
+    <corner-block class="back-track"
+                  corner-align="top-left"
+    >
+      <template #content>
+        <corner-button leftImage="LeftArrowIcon"
+                       text="Back to Homepage"
+                       @click="goToHomepage()"/>
+      </template>
+    </corner-block>
     <svg
       class="not-found__svg"
       id="raccoon"
@@ -29,6 +43,9 @@ import CornerBlock from "@/components/CornerBlock.vue";
     <div class="not-found--message">
       <h1>404 Not found</h1>
     </div>
+    <corner-block class="not-found--beige"
+                  corner-align="bottom-right"
+                  text="Error 404 - Page not found"/>
   </div>
 </template>
 
@@ -40,9 +57,10 @@ import CornerBlock from "@/components/CornerBlock.vue";
   align-items: center
   flex-grow: 1
   padding: $global-bento-space
+  background: var(--inverse-color-background)
 
 #raccoon
-  fill: var(--color-text)
+  fill: var(--inverse-color-text)
 .not-found
   display: flex
   flex-direction: column
@@ -51,4 +69,12 @@ import CornerBlock from "@/components/CornerBlock.vue";
   gap: 32px
   &__svg
     height: 400px
+  &--message
+    color: var(--inverse-color-text)
+  &--beige
+    bottom: $global-bento-space
+    right: $global-bento-space
+.back-track
+  top: $global-bento-space
+  left: $global-bento-space
 </style>

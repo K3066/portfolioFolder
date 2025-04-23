@@ -1,21 +1,31 @@
 \:root
   --color-text: var(--app-text-default)
+  --inverse-color-text: var(--app-inverse-text-default)
   --color-text-mute: var(--app-text-mute)
+  --inverse-color-text-mute: var(--app-inverse-text-mute)
 
   --color-background: var(--app-background-default)
+  --inverse-color-background: var(--app-inverse-background-default)
   --color-background-soft: var(--app-background-soft)
+  --inverse-color-background-soft: var(--app-inverse-background-soft)
   --color-background-mute: var(--app-background-mute)
+  --inverse-color-background-mute: var(--app-inverse-background-mute)
 
   --color-border: var(--app-border-default)
 
 @media (prefers-color-scheme: dark) 
   \:root
     --color-text: var(--app-inverse-text-default)
+    --inverse-color-text: var(--app-text-default)
     --color-text-mute: var(--app-inverse-text-mute)
+    --inverse-color-text-mute: var(--app-text-mute)
 
     --color-background: var(--app-inverse-background-default)
+    --inverse-color-background: var(--app-background-default)
     --color-background-soft: var(--app-inverse-background-soft)
+    --inverse-color-background-soft: var(--app-background-soft)
     --color-background-mute: var(--app-inverse-background-mute)
+    --inverse-color-background-mute: var(--app-background-mute)
 
     --color-border: var(--app-inverse-border-default)
 
@@ -47,6 +57,7 @@ h5
   height: $h5-height
 h6
   font-size: $h6-font-size
+  line-height: 140%
 body
   color: var(--color-text)
   padding: 0 $global-bento-space

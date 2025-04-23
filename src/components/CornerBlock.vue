@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import RoundedEdge from "@/components/RoundedEdge.vue";
-
-const props = defineProps({
-  cornerAlign: String,
-  text: String,
-})
+interface IProps {
+  cornerAlign: string,
+  text?: string
+}
+const props = defineProps<IProps>()
 </script>
 
 <template>
@@ -21,9 +21,11 @@ const props = defineProps({
 
 <style scoped lang="sass">
 .corner-block
+  height: 35px
   position: absolute
   width: fit-content
   &__content
+    height: 100%
     padding: 0.5rem 1rem $global-bento-space 1rem
     background: var(--color-background)
     position: relative
